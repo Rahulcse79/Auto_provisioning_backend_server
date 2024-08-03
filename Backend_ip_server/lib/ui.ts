@@ -146,9 +146,7 @@ router.post("/checkAuth",async (ctx)=> {
     };
     return;
   }
-
   const Token = authorizationHeader.split(" ")[1];
-
   try {
     const decoded = jwt.verify(Token, JWT_SECRET);
     ctx.status = 200;
